@@ -3,16 +3,32 @@ from matrix import *
 
 
 def draw_lines( matrix, screen, color ):
-    pass
+    #plot(screen,color,x,y)
+    for a in range (0,len(matrix),2):
+        draw_line(matrix[a][0],matrix[a][1],matrix[a+1][0],matrix[a+1][1],screen,color) 
+    
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    new_row = [] 
+    new_row.append(x0) 
+    new_row.append(y0) 
+    new_row.append(z0)  
+    new_row.append(1.0)
+    matrix.append(new_row)
+    new_row = [] 
+    new_row.append(x1) 
+    new_row.append(y1) 
+    new_row.append(z1)   
+    new_row.append(1.0)
+    matrix.append(new_row)
 
 def add_point( matrix, x, y, z=0 ):
-    pass
-
-
-
+    new_row = [] 
+    new_row.append(x) 
+    new_row.append(y) 
+    new_row.append(z)  
+    new_row.append(1.0)
+    matrix.append(new_row)
 
 def draw_line( x0, y0, x1, y1, screen, color ):
 
@@ -97,3 +113,10 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #end octant 7
     #end octants 2 and 7
 #end draw_line
+
+#a = [[2,2,2],[2,2,2]]
+#print_matrix(a)
+#add_point(a,1,1) 
+#print_matrix(a)
+#add_edge(a,1,1,1,2,2,2)
+#print_matrix(a)
