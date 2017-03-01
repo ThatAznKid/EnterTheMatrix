@@ -3,12 +3,16 @@ from draw import *
 
 screen = new_screen()
 
-print "matrix a\n"
-a = [[2,2,2],[2,2,2]]
+print "new matrix"
+a = new_matrix()
 print_matrix(a)
 
-print "matrix a after ident\n"
+print "matrix after ident\n"
 ident (a) 
+print_matrix(a)
+
+print "matrix a\n"
+a = [[2,2,2,2],[2,2,2,2]]
 print_matrix(a)
 
 print "matrix a after scalar mult\n"
@@ -23,7 +27,7 @@ c = matrix_mult(a,b)
 print_matrix(c)
 
 print "matrix a again"
-a = [[2,2,2],[2,2,2]]
+a = [[2,2,2,2],[2,2,2,2]]
 print_matrix(a)
 
 print "adding a point to a"
